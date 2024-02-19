@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1>User name</h1>
+            <p>@userid</p>
+            <img src="image.png" id="offical-image">
+            <label for="input-file">Upload Image</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+            <p id="value"></p>
+
+        </div>
+    </div>
+    <script>
+        var image1 = document.getElementById('input-file');
+        var text=document.getElementById('value');
+        var image2 = document.getElementById('offical-image')
+        image1.addEventListener('change', function(){
+            text.innerHTML = image1.files[0].name;                //selecting the image name from the array of images
+            image2.src = URL.createObjectURL(image1.files[0]);
+        })
+    </script>
+</body>
+</html>
