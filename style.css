@@ -6,12 +6,12 @@
 }
 
 .hero{
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #d1d1d1; 
-    max-height: 100vh;
+    height: 100vh;
 }
 
 .card{
